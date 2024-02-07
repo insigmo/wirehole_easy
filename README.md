@@ -123,15 +123,3 @@ Explain all the environment variables from your `.env` file here. (Refer to the 
 ### Additional Settings and Considerations
 
 Discuss any additional settings such as Docker secrets, umask settings, user/group identifiers, adding clients, modifying DNS providers, and networking considerations. Make sure to update any instructions to match the current setup.
-
----
-
-### Support and Updates
-
-Provide information on how to access the shell while the container is running, view logs, update containers, and handle frequently asked questions. Ensure all the commands and steps are updated to reflect the current versions and practices.
-
----
-
-###### Acknowledgements
-
-Credit to LinuxServer.io for their maintenance of the Wireguard image and other contributions to the project.
