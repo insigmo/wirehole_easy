@@ -22,7 +22,7 @@ sudo usermod -aG docker $(whoami)
 exit
 
 # Clone the WireHole repository from GitHub
-git clone https://github.com/IAmStoxe/wirehole.git
+git clone https://github.com/insigmo/wirehole_easy.git
 
 # Change directory to the cloned repository
 cd wirehole
