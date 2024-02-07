@@ -6,6 +6,26 @@ networks:
       config:
         - subnet: 10.2.0.0/24
 services:
+  wireguard:
+    image: ghcr.io/wg-easy/wg-easy
+    container_name: wireguard
+    ports:
+      - 5000:5000
+      - 51820:51820/udp
+      - 51821:1122
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+      - net.ipv4.ip_forward=1
+    volumes:
+      - ./config:/config
+    depends_on:
+      - unbound
+      - pihole
+    env_file: .env
+
   unbound:
     image: mvance/unbound:latest
     container_name: unbound
@@ -19,29 +39,8 @@ services:
     cap_add:
       - NET_ADMIN
     env_file: .env
-  wireguard:
-    depends_on:
-      - unbound
-      - pihole
-    image: ghcr.io/wg-easy/wg-easy
-    container_name: wireguard
-    ports:
-      - 5000:5000
-      - 51820:51820/udp
-      - 51821:51821
-    cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
-    sysctls:
-      - net.ipv4.conf.all.src_valid_mark=1
-      - net.ipv4.ip_forward=1
-    volumes:
-      - ./config:/config
-    env_file: .env
 
   pihole:
-    depends_on:
-      - unbound
     container_name: pihole
     image: pihole/pihole:latest
     restart: unless-stopped
@@ -57,4 +56,6 @@ services:
     networks:
       private_network:
         ipv4_address: 10.2.0.100
+    depends_on:
+      - unbound
     env_file: ./.env

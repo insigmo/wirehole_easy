@@ -1,25 +1,10 @@
 
 ## What is this?
+This project is symbiosis between [WireHole](https://github.com/IAmStoxe) and [Wireguard Easy](https://github.com/wg-easy/wg-easy). 
 
-WireHole with Wireguard Easy is a docker-compose project that combines WireGuard, PiHole, and Unbound to create a full or split-tunnel VPN that is easy to deploy and manage. This setup allows for a VPN with ad-blocking via PiHole and enhanced DNS privacy and caching through Unbound.
+**WireHole Easy** is a docker-compose project that combines WireGuard, PiHole, and Unbound to create a full or split-tunnel VPN that is easy to deploy and manage. This setup allows for a VPN with ad-blocking via PiHole and enhanced DNS privacy and caching through Unbound.
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/IAmStoxe/wirehole/issues).
-
----
-
-### Supported Architectures
-
-The image supports multiple architectures such as `x86-64`, `arm64`, and `armhf`. The `linuxserver/wireguard` image automatically selects the correct image for your architecture.
-
-**The architectures supported by this image are:**
-
-| Architecture | Tag            |
-| ------------ | -------------- |
-| x86-64       | amd64-latest   |
-| arm64        | arm64v8-latest |
-| armhf        | arm32v7-latest |
+In addition, you have WEB UI for creating configs for you clients. Open http://<you_ip_address>:1122
 
 ---
 
