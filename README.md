@@ -64,7 +64,6 @@ The `.env` file contains a series of environment variables that are essential fo
 - `WG_HOST`: You public ip address
 - `PASSWORD`: A web ui password
 - `SERVERPORT`: A web ui port
-- `INTERNAL_SUBNET` =10.6.0.0
 
 ### Pi-hole Settings
 
