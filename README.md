@@ -53,20 +53,14 @@ The `.env` file contains a series of environment variables that are essential fo
 
 - `UNBOUND_IPV4_ADDRESS`: The static IP address assigned to Unbound, ensuring it is reachable by Pi-hole.
 - `PIHOLE_IPV4_ADDRESS`: The static IP address assigned to Pi-hole, allowing it to serve DNS requests for the network.
-- `WIREGUARD_SERVER_PORT`: The port on which the WireGuard server will listen for connections.
-- `WIREGUARD_PEER_DNS`: The DNS server that WireGuard clients will use, which is typically set to the Pi-hole's address.
-
-### WireGuard Settings
-
-- `WIREGUARD_PEERS`: Specifies the number of peer/client configurations to generate for WireGuard.
+- `WG_PORT`: The port on which the WireGuard server will listen for connections.
 
 ### WireGuard-UI Settings
 - `WG_HOST`: You public ip address
 - `PASSWORD`: A web ui password
-- `SERVERPORT`: A web ui port
+- `PORT`: A web ui port
 
 ### Pi-hole Settings
-
 - `WEBPASSWORD`: The password for accessing the Pi-hole web interface. It should be set to a secure value to prevent unauthorized access.
 - `PIHOLE_DNS`: The IP address of the Unbound server used by Pi-hole to resolve DNS queries.
 
