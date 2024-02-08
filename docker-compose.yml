@@ -11,8 +11,8 @@ services:
     container_name: wireguard
     ports:
       - 5000:5000
-      - 51820:51820/udp
-      - 51821:1122
+      - 1120:51820/udp
+      - 1122:1122/tcp
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
@@ -21,6 +21,7 @@ services:
       - net.ipv4.ip_forward=1
     volumes:
       - ./config:/config
+      - ~/.wg-easy:/etc/wireguard
     depends_on:
       - unbound
       - pihole

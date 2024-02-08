@@ -28,9 +28,9 @@ git clone https://github.com/insigmo/wirehole_easy.git
 cd wirehole
 
 # Update the .env file with your configuration
-cp .env.tamplate .env
+cp .env.template .env
 
-# Replace the public IP placeholder in the docker-compose.yml. You have to change <CHANGE_THIS_PASSWORD>
+# Replace the public IP placeholder in the docker-compose.yml
 sed -i "s/PUBLIC_IP_ADDRESS/$(curl -s ifconfig.me)/g" .env
 sed -i "s/WEB_UI_PASSWORD/$WEB_UI_PASSWORD/g" .env
 # Start the Docker containers
