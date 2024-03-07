@@ -74,22 +74,6 @@ For a split-tunnel VPN, configure your WireGuard client `AllowedIps` to `10.2.0.
 
 ---
 
-### Accessing the Web Panel (WireGuard-UI)
-
-Manage your WireGuard VPN through the WireGuard-UI at:
-
-`http://{YOUR_SERVER_IP}:5000`
-
-Log in with the `WGUI_USERNAME` and `WGUI_PASSWORD` you have set in your `.env` file.
-
-### Features of WireGuard-UI
-
-- Client Management: Add, remove, and manage clients.
-- Authentication: Secure login with a username and password.
-- Configurations: Update global server settings and manage client configurations.
-
----
-
 ### Access PiHole
 
 Connect to WireGuard and access the Pi-hole admin panel at `http://10.2.0.100/admin`. The login password is the one set as `WEBPASSWORD` in your `.env` file.
