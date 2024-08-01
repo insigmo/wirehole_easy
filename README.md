@@ -13,13 +13,13 @@ In addition, you have WEB UI for creating configs for you clients. Open http://<
 To begin using WireHole, clone the repository and start the containers:
 
 ```bash
-# You need to change the password below
-WEB_UI_PASSWORD=<CHANGE_THIS_PASSWORD>
-
 # if you don't have docker
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $(whoami)
-exit
+sudo reboot
+
+# You need to change the password below
+WEB_UI_PASSWORD=<CHANGE_THIS_PASSWORD>
 
 # Clone the WireHole repository from GitHub
 git clone https://github.com/insigmo/wirehole_easy.git
