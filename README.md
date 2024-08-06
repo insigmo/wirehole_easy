@@ -25,7 +25,7 @@ WEB_UI_PASSWORD=<CHANGE_THIS_PASSWORD>
 git clone https://github.com/insigmo/wirehole_easy.git
 
 # Change directory to the cloned repository
-cd wirehole
+cd wirehole_easy/
 
 # Update the .env file with your configuration
 cp .env.template .env
