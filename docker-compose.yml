@@ -11,7 +11,7 @@ services:
     container_name: wireguard
     ports:
       - 5000:5000
-      - 1120:51820/udp
+      - 51820:51820/udp
       - 1122:1122/tcp
     cap_add:
       - NET_ADMIN
